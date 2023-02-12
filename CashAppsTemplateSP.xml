@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<pnp:Provisioning xmlns:pnp="http://schemas.dev.office.com/PnP/2022/09/ProvisioningSchema">
+  <pnp:Preferences Generator="PnP.Framework, Version=1.11.2.0, Culture=neutral, PublicKeyToken=0d501f89f11b748c" />
+  <pnp:Templates ID="CONTAINER-TEMPLATE-3E8E0E5E19F84A56A7B16587D5743815">
+    <pnp:ProvisioningTemplate ID="TEMPLATE-3E8E0E5E19F84A56A7B16587D5743815" Version="1" BaseSiteTemplate="GROUP#0" Scope="RootSite">
+      <pnp:WebSettings RequestAccessEmail="" NoCrawl="false" WelcomePage="SitePages/Home.aspx" SiteLogo="{site}/_api/GroupService/GetGroupImage?id='a35288b5-22de-4e87-8a62-2f2c5066e3c1'&amp;hash=638116555166706220" AlternateCSS="" MasterPageUrl="{masterpagecatalog}/seattle.master" CustomMasterPageUrl="{masterpagecatalog}/seattle.master" CommentsOnSitePagesDisabled="false" QuickLaunchEnabled="true" MembersCanShare="true" SearchScope="DefaultScope" SearchBoxInNavBar="Inherit" />
+      <pnp:SiteSettings AllowDesigner="true" SearchBoxInNavBar="Inherit" SearchCenterUrl="" />
+      <pnp:RegionalSettings AdjustHijriDays="0" AlternateCalendarType="None" CalendarType="Gregorian" Collation="25" FirstDayOfWeek="Sunday" FirstWeekOfYear="0" LocaleId="1033" ShowWeeks="false" Time24="false" TimeZone="13" WorkDayEndHour="5:00PM" WorkDays="62" WorkDayStartHour="8:00AM" />
+      <pnp:PropertyBagEntries>
+        <pnp:PropertyBagEntry Key="UseFastCloneFromSiteMaster" Value="TRUE" Overwrite="false" />
+      </pnp:PropertyBagEntries>
+      <pnp:Navigation AddNewPagesToNavigation="true" CreateFriendlyUrlsForNewPages="true">
+        <pnp:GlobalNavigation NavigationType="Structural">
+          <pnp:StructuralNavigation RemoveExistingNodes="true" />
+        </pnp:GlobalNavigation>
+        <pnp:CurrentNavigation NavigationType="StructuralLocal">
+          <pnp:StructuralNavigation RemoveExistingNodes="true">
+            <pnp:NavigationNode Title="Home" Url="{site}" />
+            <pnp:NavigationNode Title="dbReportedData" Url="{site}/Lists/dbReportedData/AllItems.aspx" />
+            <pnp:NavigationNode Title="dbUserTemplate" Url="{site}/Lists/dbUserTemplate/AllItems.aspx" />
+            <pnp:NavigationNode Title="dictAccounts" Url="{site}/Lists/dictAccounts/AllItems.aspx" />
+            <pnp:NavigationNode Title="Site contents" Url="{site}/_layouts/15/viewlsts.aspx" IsExternal="true" />
+          </pnp:StructuralNavigation>
+        </pnp:CurrentNavigation>
+      </pnp:Navigation>
+      <pnp:SiteFields>
+        <Field ID="{9889a80f-c9ec-41d8-a359-ac5fb5c4cfa2}" Name="_SPCallToAction" StaticName="_SPCallToAction" DisplayName="Call To Action" Type="Note" SourceID="http://schemas.microsoft.com/sharepoint/v3" Group="_Hidden" Description="" AllowDeletion="FALSE" ShowInNewForm="FALSE" ShowInEditForm="FALSE" ShowInDisplayForm="FALSE" ShowInViewForms="FALSE" ShowInListSettings="FALSE" />
+        <Field ID="{cb19284a-cde7-4570-a980-1dab8bd74470}" Name="_ExtendedDescription" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="_ExtendedDescription" DisplayName="Description" Group="Extended Columns" RichText="TRUE" ShowInEditForm="FALSE" RichTextMode="Compatible" CanToggleHidden="TRUE" Type="Note" />
+        <Field ID="{AC9CE95B-F081-4B8A-BB19-2F4427D44674}" Name="_ExpirationDate" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="_ExpirationDate" Hidden="TRUE" Group="_Hidden" ReadOnly="TRUE" Type="Lookup" List="Docs" ShowField="ExpirationDate" DisplayName="Expiration Date" FromBaseType="TRUE" DisplaceOnUpgrade="TRUE" FieldRef="ID" JoinColName="DoclibRowId" JoinRowOrdinal="0" JoinType="INNER" />
+        <Field ID="{08D89A66-4634-42B8-9D5A-0C27395A48B3}" Name="TriggerFlowInfo" SourceID="http://schemas.microsoft.com/sharepoint/v3" Required="FALSE" ShowInFileDlg="FALSE" Hidden="TRUE" ShowInNewForm="FALSE" ShowInEditForm="FALSE" ReadOnlyEnforced="FALSE" ReadOnly="TRUE" DisplaceOnUpgrade="TRUE" StaticName="TriggerFlowInfo" Type="Text" DisplayName="Trigger Flow Info" Sortable="FALSE" />
+        <Field ID="{ff41708b-e251-4237-a060-bea44657e8dc}" Name="_SPAssetFolderId" StaticName="_SPAssetFolderId" DisplayName="Asset Folder Id" Type="Number" SourceID="http://schemas.microsoft.com/sharepoint/v3" Group="_Hidden" Description="" ReadOnly="TRUE" AllowDeletion="FALSE" Hidden="TRUE" />
+        <Field ID="{3A8EE3F8-166B-4394-B3E2-E98DCF86A847}" Name="A2ODMountCount" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="A2ODMountCount" Hidden="TRUE" Group="_Hidden" ReadOnly="TRUE" Type="Lookup" List="Docs" ShowField="A2ODMountCount" DisplayName="A2OD Mount Count" FromBaseType="TRUE" DisplaceOnUpgrade="TRUE" FieldRef="ID" JoinColName="DoclibRowId" JoinRowOrdinal="0" JoinType="INNER" />
+      </pnp:SiteFields>
+      <pnp:Lists>
+        <pnp:ListInstance Title="dbReportedData" Description="" DocumentTemplate="" OnQuickLaunch="true" TemplateType="100" Url="Lists/dbReportedData" EnableVersioning="true" MinorVersionLimit="0" MaxVersionLimit="50" DraftVersionVisibility="0" TemplateFeatureID="00bfea71-de22-43b2-a848-c05709900100" EnableFolderCreation="false" DefaultDisplayFormUrl="{site}/Lists/dbReportedData/DispForm.aspx" DefaultEditFormUrl="{site}/Lists/dbReportedData/EditForm.aspx" DefaultNewFormUrl="{site}/Lists/dbReportedData/NewForm.aspx" ImageUrl="/_layouts/15/images/itgen.png?rev=47" IrmExpire="false" IrmReject="false" IsApplicationList="false" ValidationFormula="" ValidationMessage="">
+          <pnp:ContentTypeBindings>
+            <pnp:ContentTypeBinding ContentTypeID="0x01" Default="true" />
+            <pnp:ContentTypeBinding ContentTypeID="0x0120" />
+          </pnp:ContentTypeBindings>
+          <pnp:Views>
+            <View Name="{23E6E567-F170-44AD-9D3B-CC02A72762AE}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="All Items" Url="{site}/Lists/dbReportedData/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
+              <Query />
+              <ViewFields>
+                <FieldRef Name="SystemERP" />
+                <FieldRef Name="BusinessUnit" />
+                <FieldRef Name="Account" />
+                <FieldRef Name="Currency" />
+                <FieldRef Name="User" />
+                <FieldRef Name="StatementDate" />
+                <FieldRef Name="ItemsIn" />
+                <FieldRef Name="ItemsOut" />
+                <FieldRef Name="AmountIn" />
+                <FieldRef Name="AmountOut" />
+                <FieldRef Name="ZeroBalanceAmount" />
+                <FieldRef Name="IsApproved" />
+                <FieldRef Name="Approver" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <JSLink>clienttemplates.js</JSLink>
+              <CustomFormatter />
+            </View>
+          </pnp:Views>
+          <pnp:Fields>
+            <Field DisplayName="SystemERP" Format="Dropdown" IsModern="TRUE" MaxLength="255" Name="SystemERP" Title="SystemERP" Type="Text" ID="{2148b5e5-beb3-40e5-acad-a785836dd9ab}" SourceID="{{listid:dbReportedData}}" StaticName="SystemERP" ColName="nvarchar4" RowOrdinal="0" />
+            <Field DisplayName="BusinessUnit" Format="Dropdown" IsModern="TRUE" MaxLength="255" Name="BusinessUnit" Title="BusinessUnit" Type="Text" ID="{98c38af5-1873-4274-bfac-7df544de2d97}" SourceID="{{listid:dbReportedData}}" StaticName="BusinessUnit" ColName="nvarchar5" RowOrdinal="0" />
+            <Field DisplayName="Account" Format="Dropdown" IsModern="TRUE" MaxLength="255" Name="Account" Title="Account" Type="Text" ID="{b25feb7a-31ef-4c0e-a2c7-51f529efd95b}" SourceID="{{listid:dbReportedData}}" StaticName="Account" ColName="nvarchar6" RowOrdinal="0" />
+            <Field DisplayName="Currency" Format="Dropdown" IsModern="TRUE" MaxLength="255" Name="Currency" Title="Currency" Type="Text" ID="{05670d38-3cd1-4a4a-8743-95e8587a263b}" SourceID="{{listid:dbReportedData}}" StaticName="Currency" ColName="nvarchar7" RowOrdinal="0" />
+            <Field DisplayName="User" Format="Dropdown" IsModern="TRUE" List="UserInfo" Name="User" Title="User" Type="User" UserSelectionMode="0" UserSelectionScope="0" ID="{78bda594-afea-4855-baf9-e6a83546894a}" SourceID="{{listid:dbReportedData}}" StaticName="User" ColName="int1" RowOrdinal="0" />
+            <Field DisplayName="StatementDate" FriendlyDisplayFormat="Disabled" Format="DateOnly" IsModern="TRUE" Name="StatementDate" Title="StatementDate" Type="DateTime" ID="{2a672276-9d40-44c0-9f99-a0cd783138a8}" SourceID="{{listid:dbReportedData}}" StaticName="StatementDate" ColName="datetime1" RowOrdinal="0" />
+            <Field CommaSeparator="TRUE" CustomUnitOnRight="TRUE" DisplayName="ItemsIn" Format="Dropdown" IsModern="TRUE" Name="ItemsIn" Percentage="FALSE" Title="ItemsIn" Type="Number" Unit="None" ID="{cffb9f94-74d9-4a68-8920-3293fd2214ec}" SourceID="{{listid:dbReportedData}}" StaticName="ItemsIn" ColName="float1" RowOrdinal="0" />
+            <Field CommaSeparator="TRUE" CustomUnitOnRight="TRUE" DisplayName="ItemsOut" Format="Dropdown" IsModern="TRUE" Name="ItemsOut" Percentage="FALSE" Title="ItemsOut" Type="Number" Unit="None" ID="{2b632b25-9026-4a10-908f-71c1a698ad15}" SourceID="{{listid:dbReportedData}}" StaticName="ItemsOut" ColName="float2" RowOrdinal="0" />
+            <Field CommaSeparator="TRUE" CustomUnitOnRight="TRUE" DisplayName="AmountIn" Format="Dropdown" IsModern="TRUE" Name="AmountIn" Percentage="FALSE" Title="AmountIn" Type="Number" Unit="None" ID="{378131ee-9d03-4216-9608-ef0b187f75bf}" SourceID="{{listid:dbReportedData}}" StaticName="AmountIn" ColName="float3" RowOrdinal="0" />
+            <Field CommaSeparator="TRUE" CustomUnitOnRight="TRUE" DisplayName="AmountOut" Format="Dropdown" IsModern="TRUE" Name="AmountOut" Percentage="FALSE" Title="AmountOut" Type="Number" Unit="None" ID="{d34ab944-3904-45e8-9bf8-e1b6a3fe00ca}" SourceID="{{listid:dbReportedData}}" StaticName="AmountOut" ColName="float4" RowOrdinal="0" />
+            <Field CommaSeparator="TRUE" CustomUnitOnRight="TRUE" DisplayName="ZeroBalanceAmount" Format="Dropdown" IsModern="TRUE" Name="ZeroBalanceAmount" Percentage="FALSE" Title="ZeroBalanceAmount" Type="Number" Unit="None" ID="{3de63d70-02a5-4b82-9e9f-4b7eed750574}" SourceID="{{listid:dbReportedData}}" StaticName="ZeroBalanceAmount" ColName="float5" RowOrdinal="0" />
+            <Field DisplayName="IsApproved" Format="Dropdown" IsModern="TRUE" Name="IsApproved" Title="IsApproved" Type="Boolean" ID="{d3498dfd-0157-4a8d-85c5-626a9577dd65}" SourceID="{{listid:dbReportedData}}" StaticName="IsApproved" ColName="bit1" RowOrdinal="0">
+              <Default>1</Default>
+            </Field>
+            <Field DisplayName="Approver" Format="Dropdown" IsModern="TRUE" List="UserInfo" Name="Approver" Title="Approver" Type="User" UserSelectionMode="0" UserSelectionScope="0" ID="{74aa630c-4f0a-44cb-8a52-212cca08b4ff}" SourceID="{{listid:dbReportedData}}" StaticName="Approver" ColName="int2" RowOrdinal="0" />
+          </pnp:Fields>
+          <pnp:FieldRefs>
+            <pnp:FieldRef ID="fa564e0f-0c70-4ab9-b863-0177e6ddd247" Name="Title" DisplayName="Title" />
+          </pnp:FieldRefs>
+          <pnp:Webhooks>
+            <pnp:Webhook ServerNotificationUrl="https://flow-apim-europe-002-northeurope-01.azure-apim.net/apim/sharepointonline/ontableupdatedhook?r=https%253a%252f%252fprod-239.westeurope.logic.azure.com%252fworkflows%252f897ce0bc98504bdc881b6e0e55efda9f%252ftriggers%252fWhen_an_item_is_created%252fpaths%252finvoke%253fapi-version%253d2016-06-01%2526sp%253d%25252Ftriggers%25252FWhen_an_item_is_created%25252Frun%25252C%25252Ftriggers%25252FWhen_an_item_is_created%25252Fread%2526sv%253d1.0%2526sig%253dVUblxVY22LD_rsEFIi7HKo9mDFC46EqS3OEUScCWh9U" ExpiresInDays="3" />
+            <pnp:Webhook ServerNotificationUrl="https://westeurope1-0.pushnp.svc.ms/notifications?token=5191cde9-5445-44e7-a2d7-f76e89038a2c" ExpiresInDays="1" />
+          </pnp:Webhooks>
+        </pnp:ListInstance>
+        <pnp:ListInstance Title="dbUserTemplate" Description="" DocumentTemplate="" OnQuickLaunch="true" TemplateType="100" Url="Lists/dbUserTemplate" EnableVersioning="true" MinorVersionLimit="0" MaxVersionLimit="50" DraftVersionVisibility="0" TemplateFeatureID="00bfea71-de22-43b2-a848-c05709900100" EnableFolderCreation="false" DefaultDisplayFormUrl="{site}/Lists/dbUserTemplate/DispForm.aspx" DefaultEditFormUrl="{site}/Lists/dbUserTemplate/EditForm.aspx" DefaultNewFormUrl="{site}/Lists/dbUserTemplate/NewForm.aspx" ImageUrl="/_layouts/15/images/itgen.png?rev=47" IrmExpire="false" IrmReject="false" IsApplicationList="false" ValidationFormula="" ValidationMessage="">
+          <pnp:ContentTypeBindings>
+            <pnp:ContentTypeBinding ContentTypeID="0x01" Default="true" />
+            <pnp:ContentTypeBinding ContentTypeID="0x0120" />
+          </pnp:ContentTypeBindings>
+          <pnp:Views>
+            <View Name="{79F2F97E-009F-4C04-AEE8-F58C63AD38DC}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="All Items" Url="{site}/Lists/dbUserTemplate/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
+              <Query />
+              <ViewFields>
+                <FieldRef Name="SystemERP" />
+                <FieldRef Name="BusinessUnit" />
+                <FieldRef Name="Account" />
+                <FieldRef Name="Currency" />
+                <FieldRef Name="User" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <JSLink>clienttemplates.js</JSLink>
+              <CustomFormatter />
+            </View>
+          </pnp:Views>
+          <pnp:Fields>
+            <Field DisplayName="SystemERP" Format="Dropdown" IsModern="TRUE" MaxLength="255" Name="SystemERP" Title="SystemERP" Type="Text" ID="{bcbd1553-5c6f-4e1a-bb0b-ef49b57e5974}" SourceID="{{listid:dbUserTemplate}}" StaticName="SystemERP" ColName="nvarchar4" RowOrdinal="0" />
+            <Field DisplayName="BusinessUnit" Format="Dropdown" IsModern="TRUE" MaxLength="255" Name="BusinessUnit" Title="BusinessUnit" Type="Text" ID="{ca96f604-a69e-4bff-96c7-290162ef12c5}" SourceID="{{listid:dbUserTemplate}}" StaticName="BusinessUnit" ColName="nvarchar5" RowOrdinal="0" />
+            <Field DisplayName="Account" Format="Dropdown" IsModern="TRUE" MaxLength="255" Name="Account" Title="Account" Type="Text" ID="{c178220b-f3da-4901-8816-7d5d0a3651b8}" SourceID="{{listid:dbUserTemplate}}" StaticName="Account" ColName="nvarchar6" RowOrdinal="0" />
+            <Field DisplayName="Currency" Format="Dropdown" IsModern="TRUE" MaxLength="255" Name="Currency" Title="Currency" Type="Text" ID="{0c23b874-93f5-4c14-b8bb-c094af32186c}" SourceID="{{listid:dbUserTemplate}}" StaticName="Currency" ColName="nvarchar7" RowOrdinal="0" />
+            <Field DisplayName="User" Format="Dropdown" IsModern="TRUE" List="UserInfo" Name="User" Title="User" Type="User" UserSelectionMode="0" UserSelectionScope="0" ID="{ddf1536e-ef25-4db6-8030-c4c11a10217d}" SourceID="{{listid:dbUserTemplate}}" StaticName="User" ColName="int1" RowOrdinal="0" />
+          </pnp:Fields>
+          <pnp:FieldRefs>
+            <pnp:FieldRef ID="fa564e0f-0c70-4ab9-b863-0177e6ddd247" Name="Title" DisplayName="Title" />
+          </pnp:FieldRefs>
+          <pnp:Webhooks>
+            <pnp:Webhook ServerNotificationUrl="https://westeurope1-0.pushnp.svc.ms/notifications?token=5bf0c05d-f1d9-40ab-b450-e53e65e8fe31" ExpiresInDays="1" />
+          </pnp:Webhooks>
+        </pnp:ListInstance>
+        <pnp:ListInstance Title="dictAccounts" Description="" DocumentTemplate="" OnQuickLaunch="true" TemplateType="100" Url="Lists/dictAccounts" EnableVersioning="true" MinorVersionLimit="0" MaxVersionLimit="50" DraftVersionVisibility="0" TemplateFeatureID="00bfea71-de22-43b2-a848-c05709900100" EnableFolderCreation="false" DefaultDisplayFormUrl="{site}/Lists/dictAccounts/DispForm.aspx" DefaultEditFormUrl="{site}/Lists/dictAccounts/EditForm.aspx" DefaultNewFormUrl="{site}/Lists/dictAccounts/NewForm.aspx" ImageUrl="/_layouts/15/images/itgen.png?rev=47" IrmExpire="false" IrmReject="false" IsApplicationList="false" ValidationFormula="" ValidationMessage="">
+          <pnp:ContentTypeBindings>
+            <pnp:ContentTypeBinding ContentTypeID="0x01" Default="true" />
+            <pnp:ContentTypeBinding ContentTypeID="0x0120" />
+          </pnp:ContentTypeBindings>
+          <pnp:Views>
+            <View Name="{EDCAF0F9-1064-41D1-B57F-4978AB7BA963}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="All Items" Url="{site}/Lists/dictAccounts/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
+              <Query />
+              <ViewFields>
+                <FieldRef Name="SystemERP" />
+                <FieldRef Name="BusinessUnit" />
+                <FieldRef Name="Account" />
+                <FieldRef Name="Currency" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <JSLink>clienttemplates.js</JSLink>
+            </View>
+          </pnp:Views>
+          <pnp:Fields>
+            <Field Type="Text" DisplayName="SystemERP" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" ID="{19907b90-1f0f-4b4e-9763-fb9e40bce19d}" SourceID="{{listid:dictAccounts}}" StaticName="SystemERP" Name="SystemERP" ColName="nvarchar4" RowOrdinal="0" />
+            <Field Type="Text" DisplayName="BusinessUnit" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" ID="{f41aa8e8-1ece-4b42-bd74-dfdf20c40357}" SourceID="{{listid:dictAccounts}}" StaticName="BusinessUnit" Name="BusinessUnit" ColName="nvarchar5" RowOrdinal="0" />
+            <Field Type="Text" DisplayName="Account" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" ID="{efa69947-cb77-44c9-804c-cdad7d307bf1}" SourceID="{{listid:dictAccounts}}" StaticName="Account" Name="Account" ColName="nvarchar6" RowOrdinal="0" />
+            <Field Type="Text" DisplayName="Currency" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" ID="{7d822e31-aa7d-4b44-9cad-d4bfda93858f}" SourceID="{{listid:dictAccounts}}" StaticName="Currency" Name="Currency" ColName="nvarchar7" RowOrdinal="0" />
+          </pnp:Fields>
+          <pnp:FieldRefs>
+            <pnp:FieldRef ID="fa564e0f-0c70-4ab9-b863-0177e6ddd247" Name="Title" DisplayName="Title" />
+          </pnp:FieldRefs>
+          <pnp:DataRows UpdateBehavior="Overwrite">
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title" />
+              <pnp:DataValue FieldName="SystemERP">Dynamics365</pnp:DataValue>
+              <pnp:DataValue FieldName="BusinessUnit">Retail</pnp:DataValue>
+              <pnp:DataValue FieldName="Account">PL19</pnp:DataValue>
+              <pnp:DataValue FieldName="Currency">PLN</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">100</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">1_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title" />
+              <pnp:DataValue FieldName="SystemERP">Dynamics365</pnp:DataValue>
+              <pnp:DataValue FieldName="BusinessUnit">Marketing</pnp:DataValue>
+              <pnp:DataValue FieldName="Account">PL32</pnp:DataValue>
+              <pnp:DataValue FieldName="Currency">EUR</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">200</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">2_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title" />
+              <pnp:DataValue FieldName="SystemERP">Dynamics365</pnp:DataValue>
+              <pnp:DataValue FieldName="BusinessUnit">Finance</pnp:DataValue>
+              <pnp:DataValue FieldName="Account">PL78</pnp:DataValue>
+              <pnp:DataValue FieldName="Currency">EUR</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">300</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">3_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title" />
+              <pnp:DataValue FieldName="SystemERP">Dynamics365</pnp:DataValue>
+              <pnp:DataValue FieldName="BusinessUnit">HR</pnp:DataValue>
+              <pnp:DataValue FieldName="Account">PL16</pnp:DataValue>
+              <pnp:DataValue FieldName="Currency">PLN</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">400</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">4_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title" />
+              <pnp:DataValue FieldName="SystemERP">SAP</pnp:DataValue>
+              <pnp:DataValue FieldName="BusinessUnit">Retail</pnp:DataValue>
+              <pnp:DataValue FieldName="Account">BG12</pnp:DataValue>
+              <pnp:DataValue FieldName="Currency">BGN</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">500</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">5_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title" />
+              <pnp:DataValue FieldName="SystemERP">SAP</pnp:DataValue>
+              <pnp:DataValue FieldName="BusinessUnit">Retail</pnp:DataValue>
+              <pnp:DataValue FieldName="Account">BG13</pnp:DataValue>
+              <pnp:DataValue FieldName="Currency">EUR</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">600</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">6_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title" />
+              <pnp:DataValue FieldName="SystemERP">SAP</pnp:DataValue>
+              <pnp:DataValue FieldName="BusinessUnit">Finance</pnp:DataValue>
+              <pnp:DataValue FieldName="Account">BG14</pnp:DataValue>
+              <pnp:DataValue FieldName="Currency">USD</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">700</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">7_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title" />
+              <pnp:DataValue FieldName="SystemERP">SAP</pnp:DataValue>
+              <pnp:DataValue FieldName="BusinessUnit">Finance</pnp:DataValue>
+              <pnp:DataValue FieldName="Account">TR11</pnp:DataValue>
+              <pnp:DataValue FieldName="Currency">TRY</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">800</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">8_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title" />
+              <pnp:DataValue FieldName="SystemERP">SAP</pnp:DataValue>
+              <pnp:DataValue FieldName="BusinessUnit">Marketing</pnp:DataValue>
+              <pnp:DataValue FieldName="Account">TR12</pnp:DataValue>
+              <pnp:DataValue FieldName="Currency">EUR</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">900</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">9_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title" />
+              <pnp:DataValue FieldName="SystemERP">SAP</pnp:DataValue>
+              <pnp:DataValue FieldName="BusinessUnit">HR</pnp:DataValue>
+              <pnp:DataValue FieldName="Account">MO34</pnp:DataValue>
+              <pnp:DataValue FieldName="Currency">MAD</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">1000</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">10_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title" />
+              <pnp:DataValue FieldName="SystemERP">Sage</pnp:DataValue>
+              <pnp:DataValue FieldName="BusinessUnit">HR</pnp:DataValue>
+              <pnp:DataValue FieldName="Account">PL56</pnp:DataValue>
+              <pnp:DataValue FieldName="Currency">USD</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">1100</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">11_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title" />
+              <pnp:DataValue FieldName="SystemERP">Sage</pnp:DataValue>
+              <pnp:DataValue FieldName="BusinessUnit">HR</pnp:DataValue>
+              <pnp:DataValue FieldName="Account">PL57</pnp:DataValue>
+              <pnp:DataValue FieldName="Currency">EUR</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">1200</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">12_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title" />
+              <pnp:DataValue FieldName="SystemERP">Sage</pnp:DataValue>
+              <pnp:DataValue FieldName="BusinessUnit">Marketing</pnp:DataValue>
+              <pnp:DataValue FieldName="Account">PL58</pnp:DataValue>
+              <pnp:DataValue FieldName="Currency">CHF</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">1300</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">13_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title" />
+              <pnp:DataValue FieldName="SystemERP">Sage</pnp:DataValue>
+              <pnp:DataValue FieldName="BusinessUnit">Marketing</pnp:DataValue>
+              <pnp:DataValue FieldName="Account">PL59</pnp:DataValue>
+              <pnp:DataValue FieldName="Currency">USD</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">1400</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">14_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title" />
+              <pnp:DataValue FieldName="SystemERP">Sage</pnp:DataValue>
+              <pnp:DataValue FieldName="BusinessUnit">Finance</pnp:DataValue>
+              <pnp:DataValue FieldName="Account">PL60</pnp:DataValue>
+              <pnp:DataValue FieldName="Currency">EUR</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">1500</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">15_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+            <pnp:DataRow>
+              <pnp:DataValue FieldName="Title" />
+              <pnp:DataValue FieldName="SystemERP">Sage</pnp:DataValue>
+              <pnp:DataValue FieldName="BusinessUnit">Retail</pnp:DataValue>
+              <pnp:DataValue FieldName="Account">PL61</pnp:DataValue>
+              <pnp:DataValue FieldName="Currency">USD</pnp:DataValue>
+              <pnp:DataValue FieldName="Order">1600</pnp:DataValue>
+              <pnp:DataValue FieldName="FileLeafRef">16_.000</pnp:DataValue>
+              <pnp:DataValue FieldName="MetaInfo"></pnp:DataValue>
+            </pnp:DataRow>
+          </pnp:DataRows>
+          <pnp:Webhooks>
+            <pnp:Webhook ServerNotificationUrl="https://westeurope1-0.pushnp.svc.ms/notifications?token=195e6107-a501-41ef-a41b-3a13514e30d3" ExpiresInDays="1" />
+          </pnp:Webhooks>
+        </pnp:ListInstance>
+      </pnp:Lists>
+      <pnp:Features>
+        <pnp:WebFeatures>
+          <pnp:Feature ID="780ac353-eaf8-4ac2-8c47-536d93c03fd6" />
+        </pnp:WebFeatures>
+      </pnp:Features>
+      <pnp:Header Layout="Compact" />
+    </pnp:ProvisioningTemplate>
+  </pnp:Templates>
+</pnp:Provisioning>
