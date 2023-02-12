@@ -1,0 +1,89 @@
+<ImportExportXml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Entities></Entities>
+  <Roles></Roles>
+  <Workflows>
+    <Workflow WorkflowId="{c8d3a3bb-4ca9-ed11-aad1-000d3a481e91}" Name="Approve items">
+      <JsonFileName>/Workflows/Approveitems-C8D3A3BB-4CA9-ED11-AAD1-000D3A481E91.json</JsonFileName>
+      <Type>1</Type>
+      <Subprocess>0</Subprocess>
+      <Category>5</Category>
+      <Mode>0</Mode>
+      <Scope>4</Scope>
+      <OnDemand>0</OnDemand>
+      <TriggerOnCreate>0</TriggerOnCreate>
+      <TriggerOnDelete>0</TriggerOnDelete>
+      <AsyncAutodelete>0</AsyncAutodelete>
+      <SyncWorkflowLogOnFailure>0</SyncWorkflowLogOnFailure>
+      <StateCode>1</StateCode>
+      <StatusCode>2</StatusCode>
+      <RunAs>1</RunAs>
+      <IsTransacted>1</IsTransacted>
+      <IntroducedVersion>1.0.0.0</IntroducedVersion>
+      <IsCustomizable>1</IsCustomizable>
+      <IsCustomProcessingStepAllowedForOtherPublishers>1</IsCustomProcessingStepAllowedForOtherPublishers>
+      <PrimaryEntity>none</PrimaryEntity>
+      <LocalizedNames>
+        <LocalizedName languagecode="1033" description="Approve items" />
+      </LocalizedNames>
+    </Workflow>
+  </Workflows>
+  <FieldSecurityProfiles></FieldSecurityProfiles>
+  <Templates />
+  <EntityMaps />
+  <EntityRelationships />
+  <OrganizationSettings />
+  <optionsets />
+  <CustomControls />
+  <EntityDataProviders />
+  <CanvasApps>
+    <CanvasApp>
+      <Name>cashapps_cashappstracker_ae267</Name>
+      <AppVersion>2023-02-12T10:49:19Z</AppVersion>
+      <Status>Ready</Status>
+      <CreatedByClientVersion>3.23015.17.0</CreatedByClientVersion>
+      <MinClientVersion>3.23015.17.0</MinClientVersion>
+      <Tags>{"primaryDeviceWidth":"1366","primaryDeviceHeight":"768","supportsPortrait":"true","supportsLandscape":"true","primaryFormFactor":"Tablet","publisherVersion":"3.23015.17","minimumRequiredApiVersion":"2.2.0","hasComponent":"true","hasUnlockedComponent":"true","isUnifiedRootApp":"false","sienaVersion":"20230212T104152Z-3.23015.17.0"}</Tags>
+      <IsCdsUpgraded>0</IsCdsUpgraded>
+      <GalleryItemId xsi:nil="true"></GalleryItemId>
+      <BackgroundColor>RGBA(0,176,240,1)</BackgroundColor>
+      <DisplayName>Cash Apps Tracker</DisplayName>
+      <Description>Portfolio version</Description>
+      <CommitMessage>v0.6.0</CommitMessage>
+      <Publisher></Publisher>
+      <AuthorizationReferences>[]</AuthorizationReferences>
+      <ConnectionReferences>{"491023c0-a05e-4358-a34b-3e962453fe35":{"id":"/providers/microsoft.powerapps/apis/shared_office365users","displayName":"Office 365 Users","iconUri":"https://connectoricons-prod.azureedge.net/releases/v1.0.1611/1.0.1611.3104/office365users/icon.png","dataSources":["Office365Users"],"dependencies":[],"dependents":[],"parameterHints":{},"parameterHintsV2":{},"isOnPremiseConnection":false,"bypassConsent":false,"dataSets":{},"apiTier":"Standard","actions":["SearchUser","MyProfile_V2"]},"4ca83467-8b32-4263-8765-52a9635539a1":{"id":"/providers/microsoft.powerapps/apis/shared_sharepointonline","displayName":"SharePoint","iconUri":"https://connectoricons-prod.azureedge.net/u/juanq/gateway/greyhound/3000.150.11/1.0.1613.3116/sharepointonline/icon.png","dataSources":["SharePoint List (dictAccounts)","SharePoint List (dbUserTemplate)","SharePoint List (dbReportedData)"],"dependencies":[],"dependents":[],"parameterHints":{},"parameterHintsV2":{},"isOnPremiseConnection":false,"bypassConsent":false,"dataSets":{"https://vv72k.sharepoint.com/sites/CashAppsTracker":{"datasetOverride":{"name":"https://vv72k.sharepoint.com/sites/CashAppsTracker","environmentVariableName":"cashapps_SharepointSite"},"dataSources":{"SharePoint List (dictAccounts)":{"tableName":"d88c9330-171b-4aaa-a433-bc9294b05ac6","tableNameOverride":{"name":"d88c9330-171b-4aaa-a433-bc9294b05ac6","environmentVariableName":"cashapps_dictAccounts"}},"SharePoint List (dbUserTemplate)":{"tableName":"e51e4140-6d39-4ee4-bdce-37d422009063","tableNameOverride":{"name":"e51e4140-6d39-4ee4-bdce-37d422009063","environmentVariableName":"cashapps_dbUserTemplate"}},"SharePoint List (dbReportedData)":{"tableName":"35d666d2-68e2-4909-bd88-6e5c956efc18","tableNameOverride":{"name":"35d666d2-68e2-4909-bd88-6e5c956efc18","environmentVariableName":"cashapps_dbReportedData"}}}}},"apiTier":"Standard","actions":["providers/PowerPlatform.Governance/Operations/Read","providers/PowerPlatform.Governance/Operations/Write"]}}</ConnectionReferences>
+      <DatabaseReferences>{}</DatabaseReferences>
+      <AppComponents>[]</AppComponents>
+      <AppComponentDependencies>[]</AppComponentDependencies>
+      <CanConsumeAppPass>1</CanConsumeAppPass>
+      <CanvasAppType>0</CanvasAppType>
+      <BypassConsent>0</BypassConsent>
+      <AdminControlBypassConsent>0</AdminControlBypassConsent>
+      <EmbeddedApp xsi:nil="true"></EmbeddedApp>
+      <IntroducedVersion>1.0</IntroducedVersion>
+      <CdsDependencies>{"cdsdependencies":[{"logicalname":"cashapps_SharepointSite","componenttype":380,"componenttypeplatformname":"EnvironmentVariableDefinition"},{"logicalname":"cashapps_dictAccounts","componenttype":380,"componenttypeplatformname":"EnvironmentVariableDefinition"},{"logicalname":"cashapps_dbUserTemplate","componenttype":380,"componenttypeplatformname":"EnvironmentVariableDefinition"},{"logicalname":"cashapps_dbReportedData","componenttype":380,"componenttypeplatformname":"EnvironmentVariableDefinition"}]}</CdsDependencies>
+      <IsCustomizable>1</IsCustomizable>
+      <BackgroundImageUri>/CanvasApps/cashapps_cashappstracker_ae267_BackgroundImageUri</BackgroundImageUri>
+      <DocumentUri>/CanvasApps/cashapps_cashappstracker_ae267_DocumentUri.msapp</DocumentUri>
+    </CanvasApp>
+  </CanvasApps>
+  <connectionreferences>
+    <connectionreference connectionreferencelogicalname="cashapps_Outlook">
+      <connectionreferencedisplayname>Outlook (Cash Apps)</connectionreferencedisplayname>
+      <connectorid>/providers/Microsoft.PowerApps/apis/shared_office365</connectorid>
+      <iscustomizable>1</iscustomizable>
+      <statecode>0</statecode>
+      <statuscode>1</statuscode>
+    </connectionreference>
+    <connectionreference connectionreferencelogicalname="cashapps_Sharepoint">
+      <connectionreferencedisplayname>Sharepoint (Cash Apps)</connectionreferencedisplayname>
+      <connectorid>/providers/Microsoft.PowerApps/apis/shared_sharepointonline</connectorid>
+      <iscustomizable>1</iscustomizable>
+      <statecode>0</statecode>
+      <statuscode>1</statuscode>
+    </connectionreference>
+  </connectionreferences>
+  <Languages>
+    <Language>1033</Language>
+  </Languages>
+</ImportExportXml>

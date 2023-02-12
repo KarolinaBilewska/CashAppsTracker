@@ -1,0 +1,18 @@
+<environmentvariabledefinition schemaname="cashapps_dbUserTemplate">
+  <apiid>/providers/microsoft.powerapps/apis/shared_sharepointonline</apiid>
+  <description default="SharePoint list used as database to store users template">
+    <label description="SharePoint list used as database to store users template" languagecode="1033" />
+  </description>
+  <displayname default="SharePoint List (dbUserTemplate)">
+    <label description="SharePoint List (dbUserTemplate)" languagecode="1033" />
+  </displayname>
+  <introducedversion>1.0.0.0</introducedversion>
+  <iscustomizable>1</iscustomizable>
+  <isrequired>0</isrequired>
+  <parameterkey>table</parameterkey>
+  <parentdefinitionid>
+    <schemaname>cashapps_SharepointSite</schemaname>
+  </parentdefinitionid>
+  <secretstore>0</secretstore>
+  <type>100000004</type>
+</environmentvariabledefinition>

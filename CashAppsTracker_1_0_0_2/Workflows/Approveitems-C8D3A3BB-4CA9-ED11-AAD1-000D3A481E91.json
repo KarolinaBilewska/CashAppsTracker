@@ -1,0 +1,171 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_sharepointonline_1": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "cashapps_Sharepoint"
+        },
+        "api": {
+          "name": "shared_sharepointonline"
+        }
+      },
+      "shared_office365_1": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "cashapps_Outlook"
+        },
+        "api": {
+          "name": "shared_office365"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        },
+        "Sharepoint Site (CashAppsTracker) (cashapps_SharepointSite)": {
+          "defaultValue": "https://vv72k.sharepoint.com/sites/CashAppsTracker",
+          "type": "String",
+          "metadata": {
+            "schemaName": "cashapps_SharepointSite",
+            "description": "Add URL of SharePoint site where lists are stored"
+          }
+        },
+        "SharePoint List (dbReportedData) (cashapps_dbReportedData)": {
+          "defaultValue": "35d666d2-68e2-4909-bd88-6e5c956efc18",
+          "type": "String",
+          "metadata": {
+            "schemaName": "cashapps_dbReportedData",
+            "description": "SharePoint list used as database to all reported data"
+          }
+        }
+      },
+      "triggers": {
+        "When_an_item_is_created": {
+          "recurrence": {
+            "interval": 5,
+            "frequency": "Minute"
+          },
+          "splitOn": "@triggerOutputs()?['body/value']",
+          "metadata": {
+            "operationMetadataId": "22a04d1f-5767-4455-9bf8-7f1b48daca71"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_sharepointonline_1",
+              "operationId": "GetOnNewItems",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_sharepointonline"
+            },
+            "parameters": {
+              "dataset": "@parameters('Sharepoint Site (CashAppsTracker) (cashapps_SharepointSite)')",
+              "table": "@parameters('SharePoint List (dbReportedData) (cashapps_dbReportedData)')"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        }
+      },
+      "actions": {
+        "Condition": {
+          "actions": {
+            "Update_item": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "8d953961-998c-4ecf-ad4f-d419adb8259f"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_sharepointonline_1",
+                  "operationId": "PatchItem",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_sharepointonline"
+                },
+                "parameters": {
+                  "dataset": "@parameters('Sharepoint Site (CashAppsTracker) (cashapps_SharepointSite)')",
+                  "table": "@parameters('SharePoint List (dbReportedData) (cashapps_dbReportedData)')",
+                  "id": "@triggerOutputs()?['body/ID']",
+                  "item/IsApproved": true
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            }
+          },
+          "runAfter": {
+            "Send_email_with_options": [
+              "Succeeded"
+            ]
+          },
+          "else": {
+            "actions": {
+              "Send_an_email_(V2)": {
+                "runAfter": {},
+                "metadata": {
+                  "operationMetadataId": "6caa410d-cca1-47dd-a96e-0d008ca7944c"
+                },
+                "type": "OpenApiConnection",
+                "inputs": {
+                  "host": {
+                    "connectionName": "shared_office365_1",
+                    "operationId": "SendEmailV2",
+                    "apiId": "/providers/Microsoft.PowerApps/apis/shared_office365"
+                  },
+                  "parameters": {
+                    "emailMessage/To": "@triggerOutputs()?['body/User/Email']",
+                    "emailMessage/Subject": "Your items hasn't been approved: @{triggerOutputs()?['body/ID']}",
+                    "emailMessage/Body": "<p>Hi,<br>\n<br>\nYour items wasn't approved.<br>\n<br>\nThank you,<br>\nCash Apps Team</p>",
+                    "emailMessage/Importance": "Normal"
+                  },
+                  "authentication": "@parameters('$authentication')"
+                }
+              }
+            }
+          },
+          "expression": {
+            "equals": [
+              "@outputs('Send_email_with_options')?['body/SelectedOption']",
+              "Yes"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "515dd81d-a845-4770-be54-a1ba1c6a5139"
+          },
+          "type": "If"
+        },
+        "Send_email_with_options": {
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "b8fd6084-bde6-40c9-8ed4-b1c5ec8b4e0d"
+          },
+          "type": "OpenApiConnectionWebhook",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_office365_1",
+              "operationId": "SendMailWithOptions",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_office365"
+            },
+            "parameters": {
+              "optionsEmailSubscription/Message/To": "@triggerOutputs()?['body/Approver/Email']",
+              "optionsEmailSubscription/Message/Subject": "Please approve item: @{triggerOutputs()?['body/ID']}",
+              "optionsEmailSubscription/Message/Options": "Yes, No",
+              "optionsEmailSubscription/Message/Importance": "Normal",
+              "optionsEmailSubscription/Message/HideHTMLMessage": true,
+              "optionsEmailSubscription/Message/ShowHTMLConfirmationDialog": true
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        }
+      }
+    },
+    "templateName": ""
+  },
+  "schemaVersion": "1.0.0.0"
+}
